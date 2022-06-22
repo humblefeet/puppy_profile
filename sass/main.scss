@@ -1,0 +1,17 @@
+//custom variables
+$primary: #32849B;
+$light: #E8E8E8;
+
+//import bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+.form-card{
+    border: 1px $light solid;
+    
+    .avatar {
+        height: 100px;
+        width: 100px;
+        border-radius: 20px;
+    }
+}
