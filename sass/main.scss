@@ -1,17 +1,62 @@
 //custom variables
 $primary: #32849B;
 $light: #E8E8E8;
+$border-radius: 4px;
 
-//import bootstrap
+//import bootstrap - ALL for now
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
+body{
+    background-color: #F5F5F5;
+
+    input{
+        &:hover{
+            background-color: $primary;
+        }
+    }
+
+
+}
+
+// Results Card
+
+#input-form{
+    background-color: $light;
+
+    hr.answers-hr{
+        border-top: 5px $light solid;
+    }
+}
+
+#display-answers{
+    background: $primary;
+
+    
+
+}
 
 .form-card{
     border: 1px $light solid;
+    box-shadow: 0px 4px 18px 0px #00000026;
+    border-radius: 12px;
     
+    
+    
+        
     .avatar {
         height: 100px;
         width: 100px;
         border-radius: 20px;
+    }
+
+    
+}
+
+
+
+@include media-breakpoint-up(md) { 
+    //shift layout of card here
+    .form-card{
+        max-width: 50vw;
     }
 }
