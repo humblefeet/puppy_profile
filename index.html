@@ -9,62 +9,75 @@
 </head>
 <body>
     <!-- Input Form Card -->
-    <div id="input-form" class="form-card container px-5 py-4">
+    <div id="input-form" class="col form-card container-sm px-5 py-4">
         <!-- Title -->
-        <div class="title row">
+        <div class="col-12 title row">
             <h2>Puppy Profile</h2>
+            <hr class="mb-5">
         </div>
-        <hr class="mb-5">
         <!-- Form begin -->
         <div class="row mb-5">
-            <form action="/results.html" method="GET">
+            <!-- <form action="/results.html" method="POST"> -->
             <!-- Avatar Upload -->
-            <div class="col">
-                <div class="col file-field">
-                    <div class="d-flex">
-                        <img class="rounded-circle mx-auto d-block" src="..." alt="example placeholder avatar">
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <div class="btn btn-rounded float-left">
-                        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg, image/jpg">
+            <div class="col-4 justify-content-center">
+                <form runat="server">
+                    <div class=" file-field">
+                        <div class="">
+                            <img id="avatar-preview" class="rounded-circle mx-auto d-block"  alt="Avatar Preview">
+                        </div>
+                        <div class="">
+                            <input class="form-control" type="file" id="avatar-input" name="avatar" accept="image/png, image/jpeg, image/jpg">
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
-            <div class="inputs col">
+            <div class="inputs col-md-8">
                 <!-- Form Inputs -->
-                    <fieldset>
-                        <label class="form-label" for="name">Name:</label>
-                            <input class="form-control mb-3" type="text">
-                        <label class="form-label" for="dob">Date of Birth:</label>
-                            <div class="mb-3 row">
-                                <select id="month" name="month" class="col form-select form-select-md" aria-label=".form-select-md ">
+                <form action="/results.html">
+                    <!-- NAME -->
+                    <label class="form-label" for="name">Name:</label>
+                        <input class="form-control mb-3" type="text" required>
+                    <!-- DOB -->
+                    <label class="form-label" for="dob">Date of Birth:</label>
+                        <div class="mb-3 row g-3">
+                            <div class="col">
+                                <select id="month" name="month" class=" form-select form-select-md" aria-label=".form-select-md " required>
                                     <option value="" disabled selected>Month</option>
-
                                 </select>
-                                <select id="day" name="day" class="col form-select form-select-md " aria-label=".form-select-md ">
+                            </div>
+                            <div class="col">
+                                <select id="day" name="day" class=" form-select form-select-md " aria-label=".form-select-md " required>
                                         <option value="" disabled selected>Day</option>
-
                                 </select>
-                                <select id="year" name="year" class="col form-select form-select-md " aria-label=".form-select-md ">
+                            </div>    
+                            <div class="col">
+                                <select id="year" name="year" class=" form-select form-select-md " aria-label=".form-select-md " required>
                                     <option value="" disabled selected>Year</option>
 
                                 </select>
                             </div>
-                        <div class="mb-3 form-check">
-                            <label class="form-check-label" for="gender">Gender:</label>
-                                <input class="form-check-input" name="Gender" id="Female" type="checkbox">Female</input>
-                                <input class="form-check-input" name="Gender" id="Male"type="checkbox">Male</input>
                         </div>
-                        <label class="form-label" for="Misc Notes">Misc Notes:</label>
-                            <textarea class="mb-3 form-control" name="Misc Notes" id="misc" cols="30" rows="10"></textarea>
-                        <div class="row d-flex "></div>
-                            <button type="reset" class="d-flex col justify-content-between btn-lg" value="Reset">Cancel</button>
-                            <button type="submit" class="d-flex col justify-content-between btn-primary btn-lg" value="Submit">Submit</button>
+                    <!-- GENDER -->
+                    <div class="row gx-1 mb-3">
+                        <label class="col-3 col-form-label g-1 justify-content-between" for="gender">Gender:</label>
+                        <div class="form-check form-check-inline">
+                            <label for="female" class="form-check-label">female</label>
+                            <input class=" form-check-input" name="Gender" id="Female" type="checkbox"></input>
                         </div>
-                    </fieldset>    
+                        <div class="form-check form-check-inline">
+                            <input class=" form-check-input" name="Gender" id="Male"type="checkbox">Male</input>
+                        </div>
+                    </div>
+                    <!-- MISC NOTES -->
+                    <label class="form-label" for="Misc Notes">Misc Notes:</label>
+                        <textarea class="mb-3 form-control" name="Misc Notes" id="misc" cols="12" rows="5">Add additional notes here</textarea>    
+                    <div class="row align-items-center justify-content-between">
+                        <button type="reset" class="cancel-button col-4 justify-content-between btn-lg" value="Reset">Cancel</button>
+                        <button type="submit" class=" col-4 justify-content-between btn-primary btn-lg" value="Submit">Submit</button>
+                    </div>
                 </form>
-            </div>
+            </div>    
+                <!-- </form> -->
         </div>
     </div>
     

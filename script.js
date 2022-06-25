@@ -88,3 +88,16 @@ monthSelect.onchange = function() {
 daySelect.onchange = function() {
     previousDay = daySelect.value;
 }
+
+// Preview Avatar before upload
+const Avatar = getElementById("avatar");
+const AvatarPreview = getElementById("avatar-preview")
+Avatar.onchange = (e) => {
+    const file = e.target.files[0];
+    if (file){
+        AvatarPreview.src = URL.createObjectURL(file);
+    }
+    AvatarPreview.onload = () =>{
+        URL.revokeObjectURL(file);
+    }
+}
