@@ -101,3 +101,8 @@ Avatar.onchange = (e) => {
         URL.revokeObjectURL(file);
     }
 }
+
+// Display Form Data
+const urlQuery = document.location.search
+
+alert(urlQuery);

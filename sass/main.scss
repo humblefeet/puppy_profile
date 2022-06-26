@@ -7,6 +7,7 @@
 $primary: #32849B;
 $light: #E8E8E8;
 $light-text: #939393;
+$input-focus-bg: red;
 $border-radius: 4px;
 $enable-cssgrid: true;
 $enable-shadows: true;
@@ -46,17 +47,28 @@ body{
 
 #input-form{
     background-color: $light;
+    color: #FFFFFF;
 
-    hr.answers-hr{
-        border-top: 5px $light solid;
+    hr{
+        color: #FFFFFF;
     }
 }
 
 #display-answers{
-    background: $primary;
+    background-color: $primary;
+    color: #ffffff;
 
-    
+    hr{
+        border-top: 5px #ffffff solid;
+    }
 
+    .answers{
+        border: 1px solid #E8E8E8;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        min-height: 1.5rem;
+        color: $primary;
+    }
 }
 
 .form-card{
@@ -64,7 +76,7 @@ body{
     box-shadow: 0px 4px 18px 0px #00000026;
     border-radius: 12px;
     
-    background-color: red;
+    
 
     
         
@@ -79,15 +91,16 @@ body{
 
 // Custom CSS for larger-than-mobile
 
-@include media-breakpoint-down(md) { 
+@include media-breakpoint-up(sm) { 
     //shift layout of card here
     .form-card{
-        max-width: 50vw;
-        background-color: red;
+        max-width: 60vw;
+        
 
-        .cancel-submit{
-            justify-content: end;
-            background-color: red;
-        }
+        
     }
+}
+.cancel-submit{
+    justify-content: end;
+    background-color: red;
 }
