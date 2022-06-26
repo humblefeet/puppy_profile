@@ -33,13 +33,13 @@
             </div>
             <div class="inputs col-md-8">
                 <!-- Form Inputs -->
-                <form action="/results.html">
+                <form action="/results.html" method="GET">
                     <!-- NAME -->
                     <label class="form-label" for="name">Name:</label>
                         <input class="form-control mb-3" type="text" required>
                     <!-- DOB -->
                     <label class="form-label" for="dob">Date of Birth:</label>
-                        <div class="mb-3 row g-3">
+                        <div class="mb-4 row g-3">
                             <div class="col">
                                 <select id="month" name="month" class=" form-select form-select-md" aria-label=".form-select-md " required>
                                     <option value="" disabled selected>Month</option>
@@ -59,19 +59,21 @@
                         </div>
                     <!-- GENDER -->
                     <div class="row gx-1 mb-3">
-                        <label class="col-3 col-form-label g-1 justify-content-between" for="gender">Gender:</label>
-                        <div class="form-check form-check-inline">
-                            <label for="female" class="form-check-label">female</label>
+                        <label class="col-3  " for="gender">Gender:</label>
+                        <div class="form-check col">
+                            <label for="female" class="form-check-label">Female</label>
                             <input class=" form-check-input" name="Gender" id="Female" type="checkbox"></input>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class=" form-check-input" name="Gender" id="Male"type="checkbox">Male</input>
+                        <div class="form-check col">
+                            <label for="male" class="form-check-label">Male</label>
+                            <input class=" form-check-input" name="Gender" id="Male"type="checkbox"></input>
                         </div>
                     </div>
                     <!-- MISC NOTES -->
                     <label class="form-label" for="Misc Notes">Misc Notes:</label>
-                        <textarea class="mb-3 form-control" name="Misc Notes" id="misc" cols="12" rows="5">Add additional notes here</textarea>    
-                    <div class="row align-items-center justify-content-between">
+                    <textarea class="mb-4 form-control" name="Misc Notes" id="misc" cols="12" rows="5">Add additional notes here</textarea>   
+                    <!-- BUTTONS Submit/Cancel  -->
+                    <div class="cancel-submit d-flex g-1 row align-items-center justify-content-between">
                         <button type="reset" class="cancel-button col-4 justify-content-between btn-lg" value="Reset">Cancel</button>
                         <button type="submit" class=" col-4 justify-content-between btn-primary btn-lg" value="Submit">Submit</button>
                     </div>

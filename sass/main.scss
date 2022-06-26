@@ -14,6 +14,9 @@ $enable-shadows: true;
 //import bootstrap - ALL for now
 @import '../node_modules/bootstrap/scss/bootstrap';
 
+
+// Custom CSS for Mobile
+
 body{
 
 
@@ -61,7 +64,8 @@ body{
     box-shadow: 0px 4px 18px 0px #00000026;
     border-radius: 12px;
     
-    
+    background-color: red;
+
     
         
     .avatar {
@@ -73,11 +77,17 @@ body{
     
 }
 
+// Custom CSS for larger-than-mobile
 
-
-@include media-breakpoint-up(md) { 
+@include media-breakpoint-down(md) { 
     //shift layout of card here
     .form-card{
         max-width: 50vw;
+        background-color: red;
+
+        .cancel-submit{
+            justify-content: end;
+            background-color: red;
+        }
     }
 }
