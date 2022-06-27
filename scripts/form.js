@@ -1,21 +1,9 @@
 //Create references to the dropdown's
 const yearSelect = document.getElementById("year");
 const monthSelect = document.getElementById("month");
+const monthSelectValue = monthSelect.options[monthSelect.selectedIndex];
 const daySelect = document.getElementById("day");
 
-const months = ['January', 'February', 'March', 'April', 
-'May', 'June', 'July', 'August', 'September', 'October',
-'November', 'December'];
-
-//Months are always the same
-(function populateMonths(){
-    for(let i = 0; i < months.length; i++){
-        const option = document.createElement('option');
-        option.textContent = months[i];
-        monthSelect.appendChild(option);
-    }
-    monthSelect.value = "January";
-})();
 
 let previousDay;
 
@@ -30,12 +18,12 @@ function populateDays(month){
     //Get the current year
     let year = yearSelect.value;
 
-    if(month === 'January' || month === 'March' || 
-    month === 'May' || month === 'July' || month === 'August' 
-    || month === 'October' || month === 'December') {
+    if(month === '01' || month === '04' || 
+    month === '05' || month === '07' || month === '08' 
+    || month === '10' || month === '12') {
         dayNum = 31;
-    } else if(month === 'April' || month === 'June' 
-    || month === 'September' || month === 'November') {
+    } else if(month === '04' || month === '06' 
+    || month === '09' || month === '10') {
         dayNum = 30;
     }else{
         //Check for a leap year
@@ -80,27 +68,13 @@ populateDays(monthSelect.value);
 populateYears();
 
 yearSelect.onchange = function() {
-    populateDays(monthSelect.value);
+    populateDays(monthSelectValue.value);
 }
+
 monthSelect.onchange = function() {
-    populateDays(monthSelect.value);
+    populateDays(monthSelectValue.value);
 }
 daySelect.onchange = function() {
     previousDay = daySelect.value;
 }
-
-// Preview Avatar before upload
-const Avatar = getElementById("avatar");
-const AvatarPreview = getElementById("avatar-preview")
-Avatar.onchange = (e) => {
-    const file = e.target.files[0];
-    if (file){
-        AvatarPreview.src = URL.createObjectURL(file);
-    }
-    AvatarPreview.onload = () =>{
-        URL.revokeObjectURL(file);
-    }
-}
-
-// Display Form Data
 

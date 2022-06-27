@@ -25,84 +25,82 @@ $enable-shadows: true;
 
 body{
 
-
-    .title > h2{
-        font-family: 'Rockwell';
-        text-transform: uppercase;
-    }
-
-
-    .cancel-button{
-        border-color: $light-text;
-    }
-}
-
-// Results Card
-
-#input-form{
-    background-color: $light;
+    .form-card{
+        border: 1px $light solid;
+        box-shadow: 0px 4px 18px 0px #00000026;
+        border-radius: 12px;
+        
+        .title > h2{
+            font-family: 'Rockwell';
+            text-transform: uppercase;
+        }
     
-    label{
-        color: $form-label-color;
-    }
+        hr{
+            margin: 0;
+        }
 
-    hr{
-        color: #FFFFFF;
-    }
-}
-
-#display-answers{
-    background-color: $primary;
-    color: #ffffff;
-
-    hr{
-        border-top: 5px #ffffff solid;
-    }
-
-    label{
-        color: #fff;
-    }
-
-    .answers{
-        border: 1px solid #E8E8E8;
-        border-radius: 8px;
-        background-color: #FFFFFF;
-        color: $primary;
-
-        &#gender-answer{
-            width:fit-content;
+        .avatar {
+            height: 100px;
+            width: 100px;
+            border-radius: 20px;
         }
     }
 
-}
+    // Results Card
 
-.form-card{
-    border: 1px $light solid;
-    box-shadow: 0px 4px 18px 0px #00000026;
-    border-radius: 12px;
-    
-    
-
-    
+    #input-form{
+        background-color: #fff;
         
-    .avatar {
-        height: 100px;
-        width: 100px;
-        border-radius: 20px;
+        h2{
+            color: $primary;
+        }
+
+        label{
+            color: $form-label-color;
+        }
+
+        hr{
+            color: $primary;
+        }
     }
 
-    
+    #display-answers{
+        background-color: $primary;
+        color: #ffffff;
+
+        hr,
+        label{
+            color:  #ffffff;
+        }
+
+        
+        .answers{
+            border: 1px solid #E8E8E8;
+            border-radius: 8px;
+            background-color: #FFFFFF;
+            color: $primary;
+
+            &#gender-answer{
+                width:fit-content;
+            }
+        }
+
+    }
 }
+
+
+
 
 // Custom CSS for larger-than-mobile
 
-@include media-breakpoint-up(sm) { 
+@include media-breakpoint-up(md) { 
     //shift layout of card here
     .form-card{
         max-width: 60vw;
-        
+        margin-top: 5vh;
 
-        .title{
+
+        h2{
             text-align: left;
         }
     }

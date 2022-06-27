@@ -9,7 +9,7 @@ This assessment was a good lesson in using and then customizing the SASS that Bo
 ## Time Spend on puppy_profile : **9 hours**
 
 1. HTML and file structure : **1 hour**
-2. Studying Bootstrap 5.2 and install **2 hours**
+2. Studying Bootstrap 5.2 and install : **2 hours**
 3. Building framework using Bootstrap classes : **2hours**
 4. Customizing SASS of Bootstrap to best match design : **2 hours**
 5. Javascript for form functionality : **2 hours**
@@ -18,5 +18,6 @@ This assessment was a good lesson in using and then customizing the SASS that Bo
 ## Areas that were not completed
 
 - Avatar preview and upload
-- Input focus background color
+- Get correct number of days to display per month
+- Get correct fonts
 - Fine tuned detail on design specs
