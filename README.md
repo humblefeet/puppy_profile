@@ -18,6 +18,5 @@ This assessment was a good lesson in using and then customizing the SASS that Bo
 ## Areas that were not completed
 
 - Avatar preview and upload
-- Get correct number of days to display per month
 - Get correct fonts
 - Fine tuned detail on design specs

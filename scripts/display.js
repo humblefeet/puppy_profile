@@ -4,7 +4,7 @@
 const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
 });
-console.log(typeof(params.day))
+
 const monthValue = params.month;
 const dayValue = params.day;
 const yearValue = params.year;

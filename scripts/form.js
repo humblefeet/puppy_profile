@@ -1,7 +1,6 @@
 //Create references to the dropdown's
 const yearSelect = document.getElementById("year");
 const monthSelect = document.getElementById("month");
-const monthSelectValue = monthSelect.options[monthSelect.selectedIndex];
 const daySelect = document.getElementById("day");
 
 
@@ -64,15 +63,15 @@ function populateYears(){
     }
 }
 
-populateDays(monthSelect.value);
+populateDays(monthSelect.options[monthSelect.selectedIndex].value);
 populateYears();
 
 yearSelect.onchange = function() {
-    populateDays(monthSelectValue.value);
+    populateDays(monthSelect.options[monthSelect.selectedIndex].value);
 }
 
 monthSelect.onchange = function() {
-    populateDays(monthSelectValue.value);
+    populateDays(monthSelect.options[monthSelect.selectedIndex].value);
 }
 daySelect.onchange = function() {
     previousDay = daySelect.value;
