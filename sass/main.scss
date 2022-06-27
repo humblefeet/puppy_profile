@@ -7,7 +7,12 @@
 $primary: #32849B;
 $light: #E8E8E8;
 $light-text: #939393;
-$input-focus-bg: red;
+$form-label-color: #4E4E4E;
+$input-focus-bg: $primary;
+$input-border-color: $primary;
+$input-color: $primary;
+$input-focus-color: #fff;
+$form-select-color: $primary;
 $border-radius: 4px;
 $enable-cssgrid: true;
 $enable-shadows: true;
@@ -26,17 +31,6 @@ body{
         text-transform: uppercase;
     }
 
-    input{
-        &:hover{
-            background-color: $primary;
-        }
-    }
-
-    h2{
-        text-align: center;
-        justify-content: center;
-        
-    }
 
     .cancel-button{
         border-color: $light-text;
@@ -47,7 +41,10 @@ body{
 
 #input-form{
     background-color: $light;
-    color: #FFFFFF;
+    
+    label{
+        color: $form-label-color;
+    }
 
     hr{
         color: #FFFFFF;
@@ -62,13 +59,21 @@ body{
         border-top: 5px #ffffff solid;
     }
 
+    label{
+        color: #fff;
+    }
+
     .answers{
         border: 1px solid #E8E8E8;
         border-radius: 8px;
         background-color: #FFFFFF;
-        min-height: 1.5rem;
         color: $primary;
+
+        &#gender-answer{
+            width:fit-content;
+        }
     }
+
 }
 
 .form-card{
@@ -97,10 +102,8 @@ body{
         max-width: 60vw;
         
 
-        
+        .title{
+            text-align: left;
+        }
     }
-}
-.cancel-submit{
-    justify-content: end;
-    background-color: red;
 }

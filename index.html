@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./sass/main.css">
     <title>Puppy Profile - eSalon</title>
 </head>
 <body>
@@ -38,7 +38,7 @@
                 <form action="./results.html" method="get">
                     <!-- NAME -->
                     <label class="form-label" for="name">Name:</label>
-                        <input class="form-control mb-3" type="text" name="name" required>
+                        <input class="form-control mb-3" type="text" name="name" placeholder="Name" required>
                     <!-- DOB -->
                     <label class="form-label" for="dob">Date of Birth:</label>
                         <div class="mb-4 row g-3">
@@ -55,7 +55,6 @@
                             <div class="col">
                                 <select id="year" name="year" class=" form-select form-select-md " aria-label=".form-select-md " required>
                                     <option value="" disabled selected>Year</option>
-
                                 </select>
                             </div>
                         </div>
@@ -73,7 +72,7 @@
                     </div>
                     <!-- MISC NOTES -->
                     <label class="form-label" for="Misc Notes">Misc Notes:</label>
-                    <textarea class="mb-4 form-control" name="Misc Notes" id="misc" cols="12" rows="5">Add additional notes here</textarea>   
+                    <textarea class="mb-4 form-control" name="Misc Notes" id="misc" cols="12" rows="5" placeholder="Add additional notes here"></textarea>   
                     <!-- BUTTONS Submit/Cancel  -->
                     <div class="cancel-submit d-flex g-1 row align-items-center justify-content-between">
                         <button type="reset" class="cancel-button col-4 justify-content-between btn-lg" value="Reset">Cancel</button>

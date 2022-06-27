@@ -103,6 +103,4 @@ Avatar.onchange = (e) => {
 }
 
 // Display Form Data
-const urlQuery = document.location.search
 
-alert(urlQuery);
